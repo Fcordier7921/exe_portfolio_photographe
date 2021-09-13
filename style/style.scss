@@ -19,27 +19,68 @@ body {
     height: 100vh;
 }
 
-.NavBar {
+// Navbar
+.navbar {
     height: 60px;
     width: 100%;
-    background-color: $blancGriis;
+    background: $blancGriis;
     @include flexCentre;
     border-bottom: 1px solid black;
     position: fixed;
     z-index: 100;
-    .coentIntems {
-        font-size: 22px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        .items {
-            margin-right: 30px;
-            text-decoration: none;
-            color: black;
-            &:hover {
-                color: #f5f5f5;
-            }
-        }
+}
+
+.contItems {
+    font-size: 22px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.items {
+    margin-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.items:hover {
+    color: #5f5f5f;
+}
+
+.logoMenuImg {
+    width: 30px;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+}
+
+@media screen and (max-width: 700px) {
+    .logoMenuImg {
+        display: block;
+    }
+    .navbar {
+        display: block;
+    }
+    .items {
+        background: $blancGriis;
+        border: 5px solid $blancGriis;
+        margin: 0;
+        padding: 10px 20px;
+        display: block;
+    }
+    .items:nth-child(1) {
+        padding-top: 20px;
+    }
+    .contItems {
+        display: none;
+        border-top: 1px solid black;
+    }
+    /* Classe à toggle */
+    .responsive {
+        display: block;
+        margin-top: 60px;
     }
 }
 
@@ -233,4 +274,53 @@ body {
         font-size: 50px;
         letter-spacing: 5px;
     }
+}
+
+//section formulaire
+.titreForm {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.formulaire {
+    width: 100%;
+    @include flexCentre;
+    form {
+        width: 60%;
+        .row {
+            width: 100%;
+            input,
+            textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            textarea {
+                height: 150px;
+            }
+            .SubBtn {
+                width: 30%;
+                margin: 0 auto;
+                display: block;
+                margin-top: 10px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                &:hover {
+                    background: midnightblue;
+                    color: $blancCasse;
+                }
+            }
+        }
+        .row:nth-child(2),
+        .row:nth-child(3) {
+            margin-top: 30px;
+        }
+    }
+}
+
+//footer
+footer {
+    @include flexCentre;
+    border-top: 1px dashed $sombre;
 }

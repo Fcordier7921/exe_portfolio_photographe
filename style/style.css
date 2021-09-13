@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -11,31 +12,75 @@ body {
   height: 100vh;
 }
 
-.NavBar {
+.navbar {
   height: 60px;
   width: 100%;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid black;
   position: fixed;
   z-index: 100;
 }
-.NavBar .coentIntems {
+
+.contItems {
   font-size: 22px;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.NavBar .coentIntems .items {
+
+.items {
   margin-right: 30px;
+  cursor: pointer;
   text-decoration: none;
   color: black;
 }
-.NavBar .coentIntems .items:hover {
-  color: #f5f5f5;
+
+.items:hover {
+  color: #5f5f5f;
 }
 
+.logoMenuImg {
+  width: 30px;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 13px;
+}
+
+@media screen and (max-width: 700px) {
+  .logoMenuImg {
+    display: block;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  .items {
+    background: #f5f5f5;
+    border: 5px solid #f5f5f5;
+    margin: 0;
+    padding: 10px 20px;
+    display: block;
+  }
+
+  .items:nth-child(1) {
+    padding-top: 20px;
+  }
+
+  .contItems {
+    display: none;
+    border-top: 1px solid black;
+  }
+
+  /* Classe à toggle */
+  .responsive {
+    display: block;
+    margin-top: 60px;
+  }
+}
 .acceuil {
   height: 800px;
   width: 100%;
@@ -221,6 +266,55 @@ body {
   color: #f1f1f1;
   font-size: 50px;
   letter-spacing: 5px;
+}
+
+.titreForm {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.formulaire {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.formulaire form {
+  width: 60%;
+}
+.formulaire form .row {
+  width: 100%;
+}
+.formulaire form .row input,
+.formulaire form .row textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.formulaire form .row textarea {
+  height: 150px;
+}
+.formulaire form .row .SubBtn {
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.formulaire form .row .SubBtn:hover {
+  background: midnightblue;
+  color: #f1f1f1;
+}
+.formulaire form .row:nth-child(2),
+.formulaire form .row:nth-child(3) {
+  margin-top: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed #333;
 }
 
 /*# sourceMappingURL=style.css.map */

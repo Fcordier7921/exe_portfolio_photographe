@@ -13,16 +13,23 @@
 
 <body>
     <div id="acceuil">
-        <!-- aceuill et nav bar -->
+        <!-- Accueil et navbar -->
 
-        <div class="NavBar">
-            <div class="coentIntems">
-                <a href="#acceuil" class="items">Aceuil</a>
+        <div class="navbar">
+
+
+
+            <div class="contItems">
+                <a href="#accueil" class="items">Accueil</a>
                 <a href="#sectionTxtImg" class="items">À propos</a>
                 <a href="#creations" class="items">Créations</a>
                 <a href="#contact" class="items">Contact</a>
             </div>
-            <!-- <img src="/ressources/menu.svg" alt="Logo menu" class="logoMenuImg"> -->
+
+            <img src="ressources/menu.svg" alt="logo menu" class="logoMenuImg">
+
+
+
         </div>
 
         <!-- acceuil -->
@@ -108,6 +115,40 @@
     <div class="paraScroll">
         <h3>Nature</h3>
     </div>
+
+    <!-- section formulaire -->
+
+    <h2 class="titreForm">Rentrons en Contact !</h2>
+    <section class="formulaire">
+        <form id="contact">
+            <div class="row">
+                <label for="prenon">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Tom prénom ...">
+            </div>
+            <div class="row">
+                <label for="prenon">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Tom nom ...">
+            </div>
+            <div class="row">
+                <label for="msg">Message</label>
+                <textarea id="msg" name="message" placeholder="Tom message ..."></textarea>
+            </div>
+            <div class="row">
+                <input type="submit" class="SubBtn" value="Submit">
+            </div>
+
+        </form>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>Tout droits réservés &#169;</p>
+    </footer>
+
 
     <script src="app.js"></script>
 </body>
